@@ -3,3 +3,5 @@ django-debug-toolbar
 django-registration
 anafero
 django-contact-form
+psycopg2
+dj-database-url
