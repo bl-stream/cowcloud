@@ -12,28 +12,28 @@
 
 <h3>File Info</h3>
 <table>
-<tr><td>File name</td><td>{{ bigfile.name }}</td></tr>
-<tr><td>Upload date</td><td>{{ bigfile.upload_date }}</td></tr>
-<tr><td>Expire date</td><td>{{ bigfile.expire_date }}</td></tr>
-<tr><td>Size</td><td>{{ bigfile.size|filesizeformat }}</td></tr>
-<tr><td>Message</td><td>{{ bigfile.message }}</td></tr>
-<tr><td>MD5</td><td>{{ bigfile.md5 }}</td></tr>
+<tr><td>File name</td><td>{{ file.name }}</td></tr>
+<tr><td>Upload date</td><td>{{ file.upload_date }}</td></tr>
+<tr><td>Expire date</td><td>{{ file.expire_date }}</td></tr>
+<tr><td>Size</td><td>{{ file.size|filesizeformat }}</td></tr>
+<tr><td>Message</td><td>{{ file.message }}</td></tr>
+<tr><td>MD5</td><td>{{ file.md5 }}</td></tr>
 </table>
 
 
-<h2><a href="{{ STORAGE_URL }}{{ bigfile.secret }}/{{ bigfile.name }}">Download</a></h2>
-<h2><a onclick="downloader.start('{{ STORAGE_URL }}{{ bigfile.secret }}/{{ bigfile.name }}', '{{ bigfile.name }}', '{{bigfile.size}}');">click here to decrypt this file</a></h2>
+<h2><a href="{{ STORAGE_URL }}{{ file.secret }}/{{ file.name }}">Download</a></h2>
+<h2><a onclick="downloader.start('{{ STORAGE_URL }}{{ file.secret }}/{{ file.name }}', '{{ file.name }}', '{{file.size}}');">click here to decrypt this file</a></h2>
 
 <p id="downloadify"> You must have Flash 10 installed to download this file.</p>
 
 <div id="status"></div>
 <div id="progressNumber"></div>
 
-{% if bigfile.downloaders %}
+{% if file.downloaders %}
 <h3>Downloaders</h3>
 <table>
     <tr>
-        {% for downloader in bigfile.downloaders.all %}
+        {% for downloader in file.downloaders.all %}
         <td>{{ downloader.email }}</td>
         {% empty %}
         <td>No downloaders specified</td>

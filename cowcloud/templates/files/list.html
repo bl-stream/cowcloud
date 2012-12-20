@@ -6,7 +6,7 @@
 
 {% block content %}
 
-{% if bigfiles %}
+{% if files %}
 
 
 
@@ -20,14 +20,14 @@
        <td style="padding: 10px;"><h2>Delete</h2></td>
     </tr>
 
- 	{% for bigfile in bigfiles %}
+ 	{% for file in files %}
        <tr>
-	   <td><a href="{{ STORAGE_URL }}/{{ bigfile.secret }}/{{ bigfile.name }}">{{ bigfile.name }}</a></td>
-	   <td><a href="/bigfiles/download/{{ bigfile.id }}/{{ bigfile.secret }}/">download</a></td>
-       <td>{{ bigfile.upload_date }}</td>
-       <td>{{ bigfile.expire_date }}</td>
-       <td>{{ bigfile.md5 }}</td>
-	   <td><a href="/bigfiles/delete/{{ bigfile.id }}/">delete</a></td>
+	   <td><a href="{{ STORAGE_URL }}/{{ file.secret }}/{{ file.name }}">{{ file.name }}</a></td>
+	   <td><a href="/files/download/{{ file.id }}/{{ file.secret }}/">download</a></td>
+       <td>{{ file.upload_date }}</td>
+       <td>{{ file.expire_date }}</td>
+       <td>{{ file.md5 }}</td>
+	   <td><a href="/files/delete/{{ file.id }}/">delete</a></td>
 	   </tr>
 	{% endfor %}
 	</table>
@@ -39,10 +39,10 @@
 {% endblock %}
 
 
-<tr><td>File name</td><td>{{ bigfile.name }}</td></tr>
-<tr><td>Upload date</td><td>{{ bigfile.upload_date }}</td></tr>
-<tr><td>Expire date</td><td>{{ bigfile.expire_date }}</td></tr>
-<tr><td>Message</td><td>{{ bigfile.message }}</td></tr>
-<tr><td>MD5</td><td>{{ bigfile.md5 }}</td></tr>
+<tr><td>File name</td><td>{{ file.name }}</td></tr>
+<tr><td>Upload date</td><td>{{ file.upload_date }}</td></tr>
+<tr><td>Expire date</td><td>{{ file.expire_date }}</td></tr>
+<tr><td>Message</td><td>{{ file.message }}</td></tr>
+<tr><td>MD5</td><td>{{ file.md5 }}</td></tr>
 </div>
 {% include "footer.html" %}
