@@ -264,11 +264,11 @@ LOGIN_REDIRECT_URL = '/accounts/'
 LOGIN_URL = '/accounts/login/'
 LOGOUT_URL = '/accounts/logout/'
 
-MONEYBOOKERS_MERCHANT_ID = "123456"
-MONEYBOOKERS_SECRET_WORD = "YourSecretWord"
-MONEYBOOKERS_PAY_TO_EMAIL = "billing@mycompany.com"
-MONEYBOOKERS_STATUS_URL = "https://www.mycompany.com/moneybookers/status_url/"
-MONEYBOOKERS_CURRENCY_CODE = "EUR"
+#MONEYBOOKERS_MERCHANT_ID = "123456"
+#MONEYBOOKERS_SECRET_WORD = "YourSecretWord"
+#MONEYBOOKERS_PAY_TO_EMAIL = "billing@mycompany.com"
+#MONEYBOOKERS_STATUS_URL = "https://www.mycompany.com/moneybookers/status_url/"
+#MONEYBOOKERS_CURRENCY_CODE = "EUR"
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'panjul76@gmail.com'
