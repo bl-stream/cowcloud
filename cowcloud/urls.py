@@ -41,7 +41,7 @@ urlpatterns = patterns('',
     #(r'^order/$', 'View_With_Order'),
     
     url(r"^r/", include("anafero.urls")),
-    #(r'^contact/', include('contact_form.urls')),
+    (r'^contact/', include('contact_form.urls')),
 )
 
 if settings.USE_SAML2:
