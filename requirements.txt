@@ -6,6 +6,5 @@ django-contact-form
 psycopg2
 dj-database-url
 http://python-saml2.googlecode.com/files/python-saml2-0.0.5.tar.gz
-http://crypto.stanford.edu/sjcl/sjcl.zip
 httplib2
 decorator
