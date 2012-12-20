@@ -1,0 +1,5 @@
+django
+django-debug-toolbar
+django-registration
+anafero
+django-contact-form
