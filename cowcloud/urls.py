@@ -28,6 +28,7 @@ urlpatterns = patterns('',
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),    
     
+    (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/media/img/favicon.ico'}),
     (r'^$', 'django.views.generic.simple.direct_to_template', {'template':'home.html'}, 'index' ),
     (r'^plans/$', 'django.views.generic.simple.direct_to_template', {'template':'plans.html'}, 'plans' ),
     (r'^terms/$', 'django.views.generic.simple.direct_to_template', {'template':'terms.html'}, 'terms' ),

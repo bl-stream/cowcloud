@@ -5,3 +5,6 @@ anafero
 django-contact-form
 psycopg2
 dj-database-url
+http://python-saml2.googlecode.com/files/python-saml2-0.0.5.tar.gz
+httplib2
+decorator

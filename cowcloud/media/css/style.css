@@ -430,5 +430,126 @@ a, a:hover{
     font-size: 24px;
 }
 .well{min-height:20px;max-width: 350px; padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #eee;border:1px solid rgba(0, 0, 0, 0.05);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);}.well blockquote{border-color:#ddd;border-color:rgba(0, 0, 0, 0.15);}
-.well-large{padding:24px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
-.well-small{padding:9px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+
+
+.get_evernote {
+	margin-top: 2em;
+	margin-bottom: -20px;
+	text-align: center;
+	clear: both;
+	position: relative;
+    display: inline-block;
+}
+
+.get_evernote a {
+	margin: 0 auto;
+	padding-left: 0;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
+	display: block;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	border-radius: 150px;
+	width: 300px;
+	font-size: 1.2em;
+	border: 10px #6bb130 solid;
+	position:relative;
+
+	-webkit-box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.6);
+
+	background: #7abf42; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7abf42 0%, #73ba39 26%, #6db531 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abf42), color-stop(26%,#73ba39), color-stop(100%,#6db531)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7abf42 0%,#73ba39 26%,#6db531 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7abf42 0%,#73ba39 26%,#6db531 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7abf42 0%,#73ba39 26%,#6db531 100%); /* IE10+ */
+	background: linear-gradient(top,  #7abf42 0%,#73ba39 26%,#6db531 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abf42', endColorstr='#6db531',GradientType=0 ); /* IE6-9 */
+	}
+
+.get_evernote a:hover {
+	text-decoration: none;
+	background: #6db531; /* Old browsers */
+	background: -moz-linear-gradient(top, #6db531 0%, #73ba39 73%, #7abf42 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6db531), color-stop(73%,#73ba39), color-stop(99%,#7abf42)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #6db531 0%,#73ba39 73%,#7abf42 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #6db531 0%,#73ba39 73%,#7abf42 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #6db531 0%,#73ba39 73%,#7abf42 99%); /* IE10+ */
+	background: linear-gradient(top, #6db531 0%,#73ba39 73%,#7abf42 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db531', endColorstr='#7abf42',GradientType=0 ); /* IE6-9 */
+}
+
+.get_evernote a span.message {
+	margin: 0 auto;
+	padding: 15px 20px 15px 65px;
+	width: 215px;
+/*
+padding: 0px 20px 15px 10px;
+width: 310px;
+*/
+	display: block;
+	height: 22px;
+	background: url('../img/cowcloud-icon.png') no-repeat 16px 10px;
+	border-top: 1px solid rgba(82,82,82,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	border-radius: 150px;
+	/* behavior:url('/media/css/border-radius.htc'); */
+	}
+
+body.rtl .get_evernote a span.message {
+	padding: 15px 65px 15px 20px;
+	background-position: 276px 10px;
+	}
+
+
+/*
+.get_evernote a span.message img {
+	display: inline !important;
+position: relative;
+top: 1em;
+	}
+*/
+
+.get_evernote a span.follow {
+	font-size: .8em;
+	position: relative;
+	top: -1px;
+	}
+
+body.rtl .get_evernote a span.follow {
+	font-family: sans-serif;
+	}
+
+
+.get_evernote a:active span.message {
+	background-color: #53a41d;
+	}
+
+
+
+/* These rules widen the homepage button by 40px to allow more space for languages like 'da'  -AH */
+
+body.global .get_evernote a { /* See related in style_yx.css */
+	width: 340px;
+	font-size: 1.15em;
+	}
+
+body.global .get_evernote a span.message { /* See related in style_yx.css */
+	width: 255px;
+	}
+
+body.global.local_nl .get_evernote a {
+	width: 400px;
+	font-size: 1.15em;
+	}
+
+body.global.local_nl .get_evernote a span.message {
+	width: 315px;
+	}
