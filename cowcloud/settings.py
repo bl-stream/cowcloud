@@ -141,7 +141,6 @@ INSTALLED_APPS = (
     #'moneybookers',
     'anafero',
     'contact_form',
-    'djangosphinx',
 )
 
 # A sample logging configuration. The only tangible logging
