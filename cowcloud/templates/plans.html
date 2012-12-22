@@ -1,7 +1,97 @@
 {% include "base.html" %}
 <div class="container">
 {% block content %}
-
+<div class="container">
+    <div class="page-header" style="border: none">
+        <h2>Plans and Pricing</h2>
+    </div>
+    <ul class="plan-list clearfix">
+        <li class="plan">
+            <div class="plan-head">
+                <h3>CCFree</h3>
+                <div class="price">
+                    $0/month
+                </div>
+            </div>
+            <div class="plan-features">
+                <ul>
+                    <li>files self destruct after 30 days</li>
+                    <li>1 GB max. file size limit</li>
+                    <li>10 GB max. storage capacity</li>
+                    <li>public file access</li>
+                    <li>limited uploads/downloads</li>
+                </ul>
+                <div class="plan-signup">
+                    
+                        <a href="/accounts/register/" class="btn btn-primary">Register</a>
+                    
+                </div>
+            </div>
+        </li>
+        <li class="plan">
+            <div class="plan-head">
+                <h3>CCProfessional</h3>
+                <div class="price">
+                    $5/month
+                </div>
+            </div>
+            <div class="plan-features">
+                <ul>
+                    <li>self manage files stored</li>
+                    <li>2 GB max. file size limit</li>
+                    <li>20 GB max. storage capacity</li>
+                    <li>private file access</li>
+                    <li>unlimited uploads/downloads</li>
+                </ul>
+                <div class="plan-signup">
+                    
+                        <a href="/signup/?plan=professional" class="btn btn-primary">Signup Now</a>
+                    
+                </div>
+            </div>
+        </li>
+        <li class="plan">
+            <div class="plan-head">
+                <h3>CCEnterprise</h3>
+                <div class="price">
+                    $10/month
+                </div>
+            </div>
+            <div class="plan-features">
+                <ul>
+                    <li>self manage files stored</li>
+                    <li>3 GB max. file size limit</li>
+                    <li>30GB max. storage capacity</li>
+                    <li>private file access</li>
+                    <li>unlimited uploads/downloads</li>
+                </ul>
+                <div class="plan-signup">
+                    
+                        <a href="/signup/?plan=enterprise" class="btn">Signup Now</a>
+                    
+                </div>
+            </div>
+        </li>
+        <li class="plan">
+            <div class="plan-head">
+                <h3>Need more?</h3>
+                <div class="price">
+                    Let's talk
+                </div>
+            </div>
+            <div class="plan-features">
+                <p>If your company's needs are larger than any of our plans, let's talk.</p>
+                <div class="plan-signup-more">
+                    <a href="/contact/" class="btn">Contact us</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="plan-meta">
+        <p>For more information about our plans, please see the <a href="/faq/">F.A.Q</a> page.</p>
+    </div>
+    
+</div>
 {% endblock %}
 </div>
 {% include "footer.html" %}
