@@ -275,5 +275,5 @@ EMAIL_HOST_USER = 'panjul76@gmail.com'
 EMAIL_HOST_PASSWORD = 'tratap60'
 EMAIL_USE_TLS = True
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()

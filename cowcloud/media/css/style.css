@@ -568,3 +568,8 @@ body.rtl .get_evernote a span.follow {
 .plan-meta a{color:#55606E;font-weight:bold;}
 .plan-meta ul{margin:0;}.plan-meta ul li{display:inline-block;text-align:center;width:33%;}
 
+#construct {
+    font-size: 60px;
+    text-align: center;
+    margin: 20px 30px;
+}
