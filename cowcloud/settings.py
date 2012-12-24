@@ -185,7 +185,7 @@ SAML_CONFIG = {
     "sp":
         {
         "name": "Gijs SP",
-        "url": "http://www.example.com:8087/",
+        "url": "http://localhost:8087/",
         "idp": {
             "urn:mace:localhost:saml:gijs:idp": {
                 "single_signon_service": "http://localhost:8000/idp/"
@@ -275,5 +275,5 @@ EMAIL_HOST_USER = 'panjul76@gmail.com'
 EMAIL_HOST_PASSWORD = 'tratap60'
 EMAIL_USE_TLS = True
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()
