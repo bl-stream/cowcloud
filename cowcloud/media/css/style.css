@@ -349,7 +349,7 @@ a, a:hover{
   box-shadow: 0px 8px 8px -4px rgba(0, 0, 0, 0.6) inset;
   height: 27px;
   /* border-bottom:2px solid #DC5526; */
-  border-bottom:5px solid #812F11;
+  border-bottom:4.5px solid #812F11;
 }
 
 .navbar .nav li .dropdown-menu a:hover
