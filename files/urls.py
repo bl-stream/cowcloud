@@ -3,7 +3,7 @@ from django.conf import settings
 
 urlpatterns = patterns('',
     (r'^list/$', 'files.views.listfiles'),
-    (r'^download/(?P<fileid>\d+)/(?P<secret>\w{%i})/$'% settings.FILE_SECRET_LENGTH, 'files.views.download'),
+    (r'^download/(?P<fileid>\d+)/(?P<secret>\w{%i})/$' % settings.FILE_SECRET_LENGTH, 'files.views.download'),
     (r'^append.json/(?P<fileid>\d+)/$', 'files.views.append'),
     (r'^delete/(?P<fileid>\d+)/$', 'files.views.delete'),
     (r'^upload/$', 'files.views.upload'),

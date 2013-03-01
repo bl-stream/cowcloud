@@ -1,4 +1,3 @@
-
 import os.path
 import hashlib
 import shutil
@@ -34,17 +33,17 @@ def mailit(to, from_, message, url):
               body,
               'gijs@pythonic.nl',
     to, fail_silently=True)
-    
+
 
 def handle_uploaded_file(filename, secret, filedata):
     """
     Stores file into STORAGE. Returns MD5 of file
     """
     file_folder = os.path.join(settings.STORAGE_ROOT, secret)
-    
+
     if not os.access(file_folder, os.F_OK):
         os.mkdir(file_folder)
-        
+
     m = hashlib.md5()
     file_path = os.path.join(file_folder, filename)
     with open(file_path, 'wb+') as destination:
@@ -58,7 +57,7 @@ def handle_uploaded_file(filename, secret, filedata):
 def upload(request, json=False):
     if request.method == 'GET':
         form = UploadForm()
-                
+
     if request.method == 'POST':
         form = UploadForm(request.POST, request.FILES)
         if form.is_valid():
@@ -87,7 +86,7 @@ def upload(request, json=False):
                     (Site.objects.get_current().domain, file.id, file.secret)
                 from_ = request.user.email
                 mailit([receiver], from_, message, url)
-                
+
             if json:
                 response = {'status': 'ok', 'fileid': file.id}
                 return HttpResponse(simplejson.dumps(response))
@@ -97,9 +96,8 @@ def upload(request, json=False):
     if json:
         response = {'status': 'error', 'message': 'form not valid'}
         return HttpResponse(simplejson.dumps(response))
-    else:   
-        return render_to_response('files/upload.html', {'form': form,},
-                              context_instance=RequestContext(request))
+    else:
+        return render_to_response('files/upload.html', {'form': form, }, context_instance=RequestContext(request))
 
 
 def append(request, fileid):
@@ -110,27 +108,27 @@ def append(request, fileid):
     form = UploadForm(request.POST, request.FILES)
     if not form.is_valid():
         response = {'status': 'error', 'message': 'no file'}
-        return HttpResponse(simplejson.dumps(response))        
-        
+        return HttpResponse(simplejson.dumps(response))
+
     file = get_object_or_404(File, pk=fileid)
 
     if request.user != file.owner:
         raise Http404
-     
+
     data = request.FILES['file']
     size = form.cleaned_data['file'].size
     filelocation = os.path.join(settings.STORAGE_ROOT, file.secret, file.name)
-    
+
     if not os.access(filelocation, os.F_OK):
         raise Http404
-        
+
     md5 = hashlib.md5()
 
     # recalculate md5 for existing blob
-    with open(filelocation,'rb') as f: 
-        for chunk in iter(lambda: f.read(8192), ''): 
+    with open(filelocation, 'rb') as f:
+        for chunk in iter(lambda: f.read(8192), ''):
             md5.update(chunk)
-         
+
     with open(filelocation, 'ab') as f:
         for chunk in data.chunks():
             md5.update(chunk)
@@ -139,10 +137,10 @@ def append(request, fileid):
     file.md5 = md5.hexdigest()
     file.size = file.size + size
     file.save()
-    
+
     response = {'status': 'ok', 'md5': file.md5}
-    return HttpResponse(simplejson.dumps(response))  
-    
+    return HttpResponse(simplejson.dumps(response))
+
 
 def download(request, fileid, secret):
     file = get_object_or_404(File, pk=fileid)
@@ -158,7 +156,7 @@ def delete(request, fileid):
 
     if request.user != file.owner:
         raise Http404
-    
+
     file_folder = os.path.join(settings.STORAGE_ROOT, file.secret)
     file.delete()
 
@@ -167,6 +165,5 @@ def delete(request, fileid):
     except OSError:
         # file probably already gone
         pass
-     
-    return HttpResponseRedirect('/files/list/')
 
+    return HttpResponseRedirect('/files/list/')

@@ -102,6 +102,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'anafero.middleware.SessionJumpingMiddleware',
+    'pybb.middleware.PybbMiddleware',
 )
 
 ROOT_URLCONF = 'cowcloud.urls'
@@ -121,6 +122,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
     'files.context_processors.auth_urls',
     'files.context_processors.storage',
+    'pybb.context_processors.processor',
 )
 
 INSTALLED_APPS = (
@@ -141,6 +143,11 @@ INSTALLED_APPS = (
     #'moneybookers',
     'anafero',
     'contact_form',
+    'pybb',
+    'pytils',
+    'sorl.thumbnail',
+    'pure_pagination',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -250,7 +257,7 @@ DEBUG_TOOLBAR_PANELS = (
 
 DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
-    'ENABLE_STACKTRACES' : True,
+    'ENABLE_STACKTRACES': True,
 }
 
 ACCOUNT_ACTIVATION_DAYS = 7
@@ -274,6 +281,22 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'panjul76@gmail.com'
 EMAIL_HOST_PASSWORD = 'tratap60'
 EMAIL_USE_TLS = True
+
+AUTH_PROFILE_MODULE = 'pybb.Profile'
+PYBB_SMILES = {
+	'&gt;_&lt;': 'angry.png',
+	':.(': 'cry.png',
+	'o_O': 'eyes.png',
+	'[]_[]': 'geek.png',
+	'8)': 'glasses.png',
+	':D': 'lol.png',
+	':(': 'sad.png',
+	':O': 'shok.png',
+	'-_-': 'shy.png',
+	':)': 'smile.png',
+	':P': 'tongue.png',
+	';)': 'wink.png'
+}
 
 PAYPAL_RECEIVER_EMAIL = "panjul76@hotmail.com"
 #import dj_database_url

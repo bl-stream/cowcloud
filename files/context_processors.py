@@ -1,4 +1,4 @@
-from django.conf import settings # import the settings file
+from django.conf import settings  # import the settings file
 
 
 def auth_urls(context):
@@ -7,9 +7,9 @@ def auth_urls(context):
              'LOGOUT_URL': settings.LOGOUT_URL
              }
 
+
 def storage(context):
     return {
              'STORAGE_ROOT': settings.STORAGE_ROOT,
              'STORAGE_URL': settings.STORAGE_URL
              }
-

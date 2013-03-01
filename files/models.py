@@ -13,7 +13,7 @@ def secret_generator(size=settings.FILE_SECRET_LENGTH):
 
 
 def one_week_later(when=datetime.datetime.now()):
-    return  when + datetime.timedelta(weeks=1)
+    return when + datetime.timedelta(weeks=1)
 
 
 class File(models.Model):
@@ -26,7 +26,7 @@ class File(models.Model):
     message = models.TextField(blank=True)
     secret = models.CharField(max_length=settings.FILE_SECRET_LENGTH,
                               default=secret_generator)
-    
+
     def __unicode__(self):
         return self.name
 
