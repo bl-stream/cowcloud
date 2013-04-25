@@ -1,4 +1,4 @@
-Django==1.4.3
+Django==1.5
 Markdown==2.2.1
 PIL==1.1.7
 South==0.7.6
@@ -18,6 +18,7 @@ httplib2==0.7.7
 postmarkup==1.2.0
 psycopg2==2.4.6
 pybbm==0.12.4
+python-saml2==0.0.5
 pytils==0.2.3
 sorl-thumbnail==11.12
 wsgiref==0.1.2
