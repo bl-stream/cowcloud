@@ -5,11 +5,7 @@ function pybb_delete_post(url, post_id, confirm_text){
         type: 'POST',
         dataType: 'text',
         success: function (data, textStatus) {
-            if (data.length > 0) {
-                window.location = data;
-            } else {
-                $("#" + post_id).slideUp();
-            }
+            $("#" + post_id).slideUp();
         }
     };
     $.ajax(obj);
