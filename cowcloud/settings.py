@@ -142,7 +142,6 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
 
     'files',
-    'debug_toolbar',
     'registration',
     #'moneybookers',
     'anafero',
@@ -156,7 +155,8 @@ INSTALLED_APPS = (
     #'static_sitemaps',
     'downtime',
     'readonly',
-)
+    'debug_toolbar',
+ )
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
