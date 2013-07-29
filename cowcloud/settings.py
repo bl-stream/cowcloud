@@ -150,7 +150,7 @@ INSTALLED_APPS = (
     'pure_pagination',
     'south',
     'webmaster_verification',
-    'static_sitemaps',
+    #'static_sitemaps',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -311,8 +311,8 @@ WEBMASTER_VERIFICATION = {
 #    'alexa': '<alexa verification code>',
 }
 
-STATICSITEMAPS_ROOT_SITEMAP = 'cowcloud.sitemaps.sitemaps'
+#STATICSITEMAPS_ROOT_SITEMAP = 'cowcloud.sitemaps.sitemaps'
 
-#import dj_database_url
-#DATABASES['default'] =  dj_database_url.config()
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
 
