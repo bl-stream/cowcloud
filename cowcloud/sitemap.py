@@ -1,5 +1,5 @@
 from django.contrib import sitemaps
-from files.models import File, Downloader, 
+from files.models import File, Downloader
 
 import datetime
 
