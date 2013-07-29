@@ -323,11 +323,11 @@ DOWNTIME_EXEMPT_PATHS = (
 )
 
 # Set to False to allow writes
-SITE_READ_ONLY = True
+SITE_READ_ONLY = False
 
 # Enable
-DB_READ_ONLY_MIDDLEWARE_MESSAGE = True
+#DB_READ_ONLY_MIDDLEWARE_MESSAGE = True
 
-#import dj_database_url
-#DATABASES['default'] =  dj_database_url.config()
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
 
