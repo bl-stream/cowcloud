@@ -23,7 +23,7 @@ urlpatterns = patterns('',
     (r'^accounts/$', 'django.views.generic.simple.direct_to_template', {'template': 'accounts.html'}, 'accounts'),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
-	(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+	#(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 	
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/media/img/favicon.ico'}),
     (r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'home.html'}, 'index'),
