@@ -2,67 +2,52 @@
 {% include "header.html" %}
 
 {% block content %}
+
 <div class="container-fluid">
-	<div class="container">
-		<div id="mast">
-			<div class="row">
-				<div class="span4">
-					<a href="/" title="CowCloud"><img alt="CowCloud" src="{{ MEDIA_URL }}img/cowcloud-logo.jpeg" width="140px" height="140px"></a>
-				</div>
-				
-				<div class="span8 pitch">
-					<p class="row">
-						<!--<span class="logo"><b>CowCloud</b></span><span class="tagline"><b>file delivery &amp; cloud storage</b></span> -->
-						<span class="pull-left"><b>CowCloud is a file sharing service that lets you send your photos, docs, and videos anywhere and share them easily. <br />Never email yourself a file again!</b></span>
-						<!--<a href="/accounts/register/" class="btn orange pull-right">Sign Up</a> -->
-						<!--<a href="/accounts/register/" class="btn orange pull-right" data-toggle="modal" data-target="#signup-modal">Sign Up</a>-->
-					</p>
-				<!--<div class="modal fade" id="signup-modal" style="display: none;">
-					<div class="modal-header">
-						<a class="close" data-dismiss="modal">×</a>
-						<h3>Sign up to join CowCloud</h3>
-					</div>
-				</div>-->
-				</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
+<section class="mast">
 <div class="row-fluid">
-	<div class="span4">
-		<img src="{{ MEDIA_URL }}img/dollar_2.png" alt="Sending Large Files Over Email " />
-		<span class="entry-title">Simple Affordable Plans</span>
-		<div class="text">
-			You’re in luck! All new CowCloud accounts START with 2GB of free storage!<br />
-			CowCloud offers three simple plans without all the confusing 'extras' you don't need! One free service & two affordable paying plans offering larger file capabilities & storage.<br /><br />
-			Need more spaces? CCProfessional and CCEnterprise accounts get up to 30 GB! <a href="/plans/">Learn More</a>
-		</div>
-	</div>
-	
-	<div class="span4">
-		<img src="{{ MEDIA_URL }}img/lock_2.png" alt="Transferring Large Files Over Email " />
-		<span class="entry-title">Safety Storage</span>
-		<div class="text">
-			CowCloud files are secured with AES 256 bit encrypted and your connection to our server is encrypted with an RSA 2048 bit key and Secure Sockets Layer.<br /><br />
-			Your files are always safe and sound on CowCloud!
-		</div>
-	</div>
-	
-	<div class="span4">
-		<img src="{{ MEDIA_URL }}img/email_2.png" alt="Big File Sending and Transferring plans" />
-		<span class="entry-title">Access Anywhere</span>
-		<div class="text">
-			From home to work or North Pole to South Pole - securely access your files ANYWHERE your travels take you!<br />
-			Upload &amp; share files right from your desktop with a link &amp; email or mobile device with CCMobile (*soon)!<br /><br />
-			Store, access & send files anywhere, anytime!
-		</div>
-	</div>
+<div class="span4">
+<img alt="CowCloud" src="{{ MEDIA_URL }}img/cowcloud-logo.png" width="140px" height="140px">
 </div>
+<div class="span8">
+<b>CowCloud is a cloud service that lets you send your photos, docs, and videos anywhere and share them easily. <br />Never email yourself a file again!</b>
+</div>
+</div>
+</section>
 
+<section class="features">
 <div class="row-fluid">
-	<h2>Plans and Pricing</h2>
-	<ul class="plan-list clearfix">
+<div class="span4">
+<img src="{{ MEDIA_URL }}img/dollar_2.png" alt="Sending Large Files Over Email " />
+<span class="entry-title">Simple Affordable Plans</span>
+<div class="text">You’re in luck! All new CowCloud accounts START with 2GB of free storage!<br />
+CowCloud offers three simple plans without all the confusing 'extras' you don't need! One free service & two affordable paying plans offering larger file capabilities & storage.<br /><br />
+Need more spaces? CCProfessional and CCEnterprise accounts get up to 30 GB! <a href="#plans">Learn More</a>
+</div>
+</div>
+<div class="span4">
+<img src="{{ MEDIA_URL }}img/lock_2.png" alt="Transferring Large Files Over Email " />
+<span class="entry-title">Safety Storage</span>
+<div class="text">CowCloud files are secured with AES 256 bit encrypted and your connection to our server is encrypted with an RSA 2048 bit key and Secure Sockets Layer.<br /><br />
+Your files are always safe and sound on CowCloud!
+</div>
+</div>
+<div class="span4">
+<img src="{{ MEDIA_URL }}img/email_2.png" alt="Big File Sending and Transferring plans" />
+<span class="entry-title">Access Anywhere</span>
+<div class="text">From home to work or North Pole to South Pole - securely access your files ANYWHERE your travels take you!<br />
+Upload &amp; share files right from your desktop with a link &amp; email or mobile device with CCMobile (*soon)!<br /><br />
+Store, access & send files anywhere, anytime!
+</div>
+</div>
+</div>
+</section>
+<div class="clearfix"></div>
+
+<section class="plans">
+<div class="row-fluid">
+<h2>Plans and Pricing</h2>
+<ul class="plan-list clearfix">
 <li class="plan">
 <div class="span3">
 <h3>CCFree</h3>
@@ -142,7 +127,10 @@ Let's talk
 <p>For more information about our plans, please see the <a href="#faqs">FAQs</a> page.</p>
 </div>
 </div>
+</section>
+<div class="clearfix"></div>
 
+<section class="faqs">
 <div class="row-fluid">
 <h2>Frequently Asked Questions</h2>
 <br><br>
@@ -187,8 +175,10 @@ A: CowCloud is built with the latest web technologies and hosted on dedicated Li
 Terms &amp; Conditions<br>
 <a href="/terms/">www.cowcloud.com/terms</a>
 </div>
-</div>
+</section>
+<div class="clearfix"></div>
 
+</div><!--/.container-fluid -->
 {% endblock %}
 
 {% include "footer.html" %}

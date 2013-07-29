@@ -93,8 +93,6 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-	'downtime.middleware.DowntimeMiddleware',
-	'readonly.middleware.DatabaseReadOnlyMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -125,7 +123,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'files.context_processors.auth_urls',
     'files.context_processors.storage',
     'pybb.context_processors.processor',
-    'readonly.context_processors.readonly',
 )
 
 INSTALLED_APPS = (
@@ -135,28 +132,24 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sitemaps',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
 
     'files',
+    'faq',
+    'debug_toolbar',
     'registration',
     #'moneybookers',
-    'anafero',
+    #'anafero',
     'contact_form',
     'pybb',
     'pytils',
     'sorl.thumbnail',
-    'pure_pagination',
+    #'pure_pagination',
     'south',
-    'webmaster_verification',
-    #'static_sitemaps',
-    'downtime',
-    'readonly',
-    'debug_toolbar',
- )
+)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -308,26 +301,6 @@ PYBB_SMILES = {
 
 PAYPAL_RECEIVER_EMAIL = "panjul76@hotmail.com"
 
-WEBMASTER_VERIFICATION = {
-#    'bing': '<bing verification code>',
-    'google': 'google722faf1b2e594e5e',
-#    'majestic': '<majestic verification code>',
-#    'yandex': '<yandex verification code>',
-#    'alexa': '<alexa verification code>',
-}
-
-#STATICSITEMAPS_ROOT_SITEMAP = 'cowcloud.sitemaps.sitemaps'
-
-DOWNTIME_EXEMPT_PATHS = (
-    '/admin',
-)
-
-# Set to False to allow writes
-SITE_READ_ONLY = False
-
-# Enable
-#DB_READ_ONLY_MIDDLEWARE_MESSAGE = True
-
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()
 
