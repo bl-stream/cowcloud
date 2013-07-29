@@ -26,39 +26,6 @@
 			</a>
 		</div>
 		
-		{% if user.is_authenticated %}
-		<div class="member-welcome pull-right">
-			<ul class="nav pull-right">
-				<li class="dropdown pull-right">
-					<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome back' %}, {{ user.get_full_name }} <b class="caret"></b></a> -->
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome back' %}, {{ user.username }} <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="{% url django.contrib.auth.views.password_change %}">{% trans "Change password" %}</a></li>
-						<li><a href="{% url django.contrib.auth.views.logout %}">{% trans 'Logout' %}</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		
-		{% else %}
-		<form class="navbar-form pull-right" action="{% url django.contrib.auth.views.login %}" method="post">
-			{% csrf_token %}
-			<div style="display:none">
-				<input name="csrfmiddlewaretoken" value="{{ csrf_token }}" type="hidden">
-			</div>
-			<input class="input-small" name="username" id="id_username" type="text" placeholder="{% trans 'Username' %}">
-			<input class="input-small" name="password" id="id_password" type="password" placeholder="{% trans 'Password' %}">
-			<div class="btn-group pull-right">
-				<button class="btn" type="submit">{% trans 'Login' %}</button>
-				<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-				<ul class="dropdown-menu">
-					<!-- dropdown menu links -->
-					<li><a href="{% url django.contrib.auth.views.password_reset %}">{% trans "Forgot your password?" %}</a></li>
-					<li><a href="/accounts/register/">Sign Up</a></li>
-				</ul>
-			</div>
-		</form>
-		{% endif %}
 		</div><!--/.nav-collapse -->
 	</div><!--/.navbar-inner -->
 </div><!--/.navbar main -->
