@@ -94,6 +94,7 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
 	'downtime.middleware.DowntimeMiddleware',
+	'readonly.middleware.DatabaseReadOnlyMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -124,6 +125,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'files.context_processors.auth_urls',
     'files.context_processors.storage',
     'pybb.context_processors.processor',
+    'readonly.context_processors.readonly',
 )
 
 INSTALLED_APPS = (
@@ -153,6 +155,7 @@ INSTALLED_APPS = (
     'webmaster_verification',
     #'static_sitemaps',
     'downtime',
+    'readonly',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -319,6 +322,11 @@ DOWNTIME_EXEMPT_PATHS = (
     '/admin',
 )
 
+# Set to False to allow writes
+SITE_READ_ONLY = True
+
+# Enable
+DB_READ_ONLY_MIDDLEWARE_MESSAGE = True
 
 #import dj_database_url
 #DATABASES['default'] =  dj_database_url.config()
