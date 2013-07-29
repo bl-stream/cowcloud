@@ -2,8 +2,6 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 
-from matchfwd.sitemap import sitemaps  # --- add this with your own module name
-
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
