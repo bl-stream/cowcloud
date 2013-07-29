@@ -2,6 +2,8 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 
+from sitemap import *
+
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -23,7 +25,8 @@ urlpatterns = patterns('',
     (r'^accounts/$', 'django.views.generic.simple.direct_to_template', {'template': 'accounts.html'}, 'accounts'),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
-	#(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+    url('imprint', 'cowcloud.views.imprint', name='homepage_imprint'),
+	url('archive', 'cowcloud.views.archive', name='homepage_archive'),
 	
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/media/img/favicon.ico'}),
     (r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'home.html'}, 'index'),
@@ -48,6 +51,10 @@ urlpatterns += patterns('django.views.generic.simple',
 	(r'^google722faf1b2e594e5e.html$', 'direct_to_template', {'template':'google722faf1b2e594e5e.html', 'mimetype':'text/plain'}),
 )
 
+urlpatterns += patterns('',
+    (r'^sitemap\.xml, 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+)
+
 if settings.USE_SAML2:
     urlpatterns += patterns('',
         (r'^saml2/', include('djangosaml2.urls')),
@@ -59,3 +66,8 @@ if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^storage/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STORAGE_ROOT}),
 )
+
+sitemaps = {
+	'pages':Sitemap(['homepage_imprint', 'homepage_archive']),
+	'blog':FileSitemap, 'site':Sitemap(['cowcloud.org', 'cowcloud.org']),
+}
