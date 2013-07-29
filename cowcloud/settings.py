@@ -300,6 +300,6 @@ PYBB_SMILES = {
 
 PAYPAL_RECEIVER_EMAIL = "panjul76@hotmail.com"
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()
 

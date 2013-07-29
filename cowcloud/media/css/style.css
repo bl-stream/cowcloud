@@ -2,59 +2,6 @@ body, p, input, button, select, textarea {
   font-family: 'Ubuntu', sans-serif;
 }
 
-.dropdown-menu li > a:hover,
-.dropdown-menu .active > a,
-.dropdown-menu .active > a:hover {
-  color: white;
-  text-decoration: none;
-  background-color: #2d2d2d;
-}
-.navbar.main .navbar-inner {
-  border-radius: 0 0 3px 3px;
-  background: #2d2d2d;
-  opacity: 0.75;
-  padding: 0;
-  height: 50px;
-}
-.navbar.main .divider-vertical {
-  margin: 0;
-  background: #404040;
-  border-right: 0px solid #404040;
-  height: 14px;
-  margin-top: 13px;
-}
-.navbar.main .nav .active > a,
-.navbar.main .nav .active > a:hover {
-  background: inherit;
-  color: #b6b6b6;
-  font-weight: bold;
-}
-.navbar.main .nav  > li > a {
-  color: #bbbbbb;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-}
-.navbar.main form {
-  width: 316px;
-  margin-top: -50px;
-}
-.navbar.main form input {
-  width: 100px;
-}
-.navbar.main form button {
-  background: #dc5526;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  color: white;
-  font-weight: bold;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-}
-.navbar.main form .btn-group {
-  margin-left: 3px;
-  margin-right: 5px;
-}
-.navbar.main form .dropdown-menu:after,
-.navbar.main form .dropdown-menu:before {
-  display: none;
-}
 #mast {
   height: 120px;
   margin-top: 30px;
@@ -95,78 +42,6 @@ body, p, input, button, select, textarea {
   background: #dc5526;
 }
 
-.contact-us form input,
-.contact-us form textarea {
-  width: 292px;
-}
-.contact-us form label,
-.contact-us form input {
-  font-size: 16px;
-  line-height: 24px;
-}
-.contact-us form img {
-  display: block;
-  margin-bottom: 3px;
-}
-.contact-us .sidebar dt,
-.contact-us .sidebar dd {
-  font-size: 18px;
-  line-height: 36px;
-}
-.contact-us .sidebar dd {
-  margin-bottom: 20px;
-}
-.faqs .questions {
-  padding: 0 100px 0 40px;
-}
-.faqs .questions .question {
-  margin-bottom: 30px;
-}
-.faqs .questions h4 {
-  color: #dc5526;
-  margin: 10px 0;
-}
-.faqs .questions p,
-.faqs .questions li {
-  font-size: 15px;
-  line-height: 24px;
-}
-
-.orange-text {
-  color: #dc5526;
-}
-#subnav {
-  border-bottom: 1px solid #2d2d2d;
-}
-#subnav  > li > a {
-  color: #404040;
-}
-#subnav  > .active > a {
-  font-weight: bold;
-  color: #dc5526;
-  border-color: #2d2d2d #2d2d2d transparent;
-}
-.popover-inner {
-  background: #2d2d2d;
-}
-.popover.top .arrow {
-  border-top: 5px solid #2d2d2d;
-}
-.popover.right .arrow {
-  border-right: 5px solid #2d2d2d;
-}
-.popover.bottom .arrow {
-  border-bottom: 5px solid #2d2d2d;
-}
-.popover.left .arrow {
-  border-left: 5px solid #2d2d2d;
-}
-.alert-success {
-  color: white;
-  background-color: #dc5526;
-  border-color: #ffffaa;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-}
 #map-org-filter {
   position: absolute;
   right: 85px;
@@ -337,50 +212,6 @@ a, a:hover{
   width: 480px;
 }
 
-.navbar {
-  position: fixed;
-  width:100%;
-  clear: both;
-}
-
-.navbar .nav li a:hover
-{
-  background-color: #dc5526;
-  color: #ffffff;
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 8px 8px -4px rgba(0, 0, 0, 0.6) inset;
-  height: 27.5px;
-  /* border-bottom:2px solid #DC5526; */
-  border-bottom:4px solid #812F11;
-}
-
-.navbar .nav li .dropdown-menu a:hover
-{
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #dc5526;
-}
-
-.navbar-inner {
-    box-shadow:0 1px 3px #dc5526,inset 0 -1px 0 #dc5526;
-}
-
-.footer {
-    box-shadow:0 0 0 #dc5526,inset 0 2px 0 0 #dc5526;
-    bottom: 0px;
-    padding-top: 10px;
-    position: relative;
-    width: 100%;
-    height: 40px;
-    background-color: #2d2d2d;
-    color: #d2d2d2;
-}
-
-.footer p {
-  margin: 5px 10px;
-  text-align: right;
-}
-
 .centerer {
     width: auto;
     margin: 20px auto 0 auto;
@@ -424,13 +255,6 @@ a, a:hover{
     padding-top:10px;
 }
 
-.logo{
-    float:left;
-}
-.tagline{
-    float:left;
-    font-size: 10px;
-}
 .pull-left{
     color: #dc5526;
     font-size: 24px;
@@ -439,7 +263,7 @@ a, a:hover{
 
 
 .get_evernote {
-    margin: 10px 150px;
+    margin: 10px 170px 10px -10px;
 	text-align: center;
 	clear: both;
 	position: relative;

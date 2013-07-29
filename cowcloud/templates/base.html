@@ -10,7 +10,9 @@
 <link rel="shortcut icon" href="{{ MEDIA_URL }}img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/reset.css" type="text/css" />
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/header.css" type="text/css" />
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css" type="text/css" />
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/footer.css" type="text/css" />
 <style type="text/css">
     @font-face {
         font-family: 'Ubuntu';
@@ -26,124 +28,11 @@
 </head>
 
 <body>
-	<div class="navbar main">
-		<div class="navbar-inner">
-			<div class="container">
-				<div class="nav-collapse">
-					<ul class="nav">
-						<li><a href="/">Home</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="/files/upload/">Upload File</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="/files/list/">My Files</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="/plans/">Plans</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="/faq/">FAQ</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="/contact/">Contact</a></li>
-					</ul>
 
-                    <div class="get_evernote">
-                        <a href="/plans/" title="CowCloud" id="downloadLink">
-                            <span class="message">
-                            <span id="en_icon" lang="en">Get CowCloud, it&#8217;s free</span>
-                            <span class="follow" lang="">&#9658;</span>
-                            </span>
-                        </a>
-                    </div>
-
-					{% if user.is_authenticated %}
-					<div class="member-welcome pull-right">
-						<ul class="nav pull-right">
-							<li class="dropdown pull-right">
-								<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome back' %}, {{ user.get_full_name }} <b class="caret"></b></a> -->
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome back' %}, {{ user.username }} <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="{% url django.contrib.auth.views.password_change %}">{% trans "Change password" %}</a></li>
-									<li><a href="{% url django.contrib.auth.views.logout %}">{% trans 'Logout' %}</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-
-					{% else %}
-					<form class="navbar-form pull-right" action="{% url django.contrib.auth.views.login %}" method="post">
-					{% csrf_token %}
-						<div style="display:none">
-							<input name="csrfmiddlewaretoken" value="{{ csrf_token }}" type="hidden"></div>
-							<input class="input-small" name="username" id="id_username" type="text" placeholder="{% trans 'Username' %}">
-							<input class="input-small" name="password" id="id_password" type="password" placeholder="{% trans 'Password' %}">
-						<div class="btn-group pull-right">
-							<button class="btn" type="submit">{% trans 'Login' %}</button>
-							<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-
-							<ul class="dropdown-menu">
-							<!-- dropdown menu links -->
-							<li><a href="{% url django.contrib.auth.views.password_reset %}">{% trans "Forgot your password?" %}</a></li>
-							<li><a href="/accounts/register/">Sign Up</a></li>
-							</ul>
-						</div>
-					</form>
-					{% endif %}
-				</div><!--/.nav-collapse -->
-			</div>
-		</div>
-	</div>
-
-<div class="container">
-	<div id="context-actions">
-		<div id="context-primary-actions"></div>
-		<div id="context-secondary-actions"></div>
-	</div>
-
-	<div class="container">
-		<div id="mast">
-			<div class="row">
-				<div class="span4">
-                    <a href="/" title="CowCloud"><img alt="CowCloud" src="{{ MEDIA_URL }}img/cowcloud-logo.jpeg" width="140px" height="140px"></a>
-				</div>
-
-				<div class="span8 pitch">
-					<p class="row">
-<!--						<span class="logo"><b>CowCloud</b></span><span class="tagline"><b>file delivery &amp; cloud storage</b></span> -->
-                        <span class="pull-left"><b>CowCloud is a cloud service that lets you send your photos, docs, and videos anywhere and share them easily. <br />Never email yourself a file again!</b></span>
-<!--						<a href="/accounts/register/" class="btn orange pull-right">Sign Up</a> -->
-
-<!--						<a href="/accounts/register/" class="btn orange pull-right" data-toggle="modal" data-target="#signup-modal">Sign Up</a>-->
-					</p>
-<!--					<div class="modal fade" id="signup-modal" style="display: none;">
-						<div class="modal-header">
-							<a class="close" data-dismiss="modal">×</a>
-							<h3>Sign up to join CowCloud</h3>
-						</div>
-						<div class="modal-body"></div>
-					</div>
--->
-
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-</div>
-
-<div class="container">
-    <hr />
-    {% block pagetitle %}
-    {% endblock %}
-</div>
-<div class="clear"></div>
-
-
-<div class="container">
 {% block content %}
+{{ flatpage.content|safe }}
 {% endblock %}
-</div>
-
-
-</div>
+<div class="clear"></div>
 
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui-1.js"></script>
@@ -151,6 +40,7 @@
 <script type="text/javascript" src="{{ MEDIA_URL }}js/handlebars-1.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/bootstrap.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/bootbox.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/scroll.js"></script>
 
 </body>
 </html>
