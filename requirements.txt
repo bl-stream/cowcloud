@@ -11,9 +11,13 @@ django-annoying==0.7.7
 django-appconf==0.5
 django-contact-form==0.3.1
 django-debug-toolbar==0.9.4
+django-faq==0.8.3
 django-mailer==0.1.0
+django-openid-auth==0.4
 django-pure-pagination==0.2.1
 django-registration==0.8
+django-webmaster-verification==0.2.1
+gunicorn==17.5
 httplib2==0.7.7
 postmarkup==1.2.0
 psycopg2==2.4.6

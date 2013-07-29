@@ -42,6 +42,7 @@ urlpatterns = patterns('',
 
     url(r"^r/", include("anafero.urls")),
     (r'^contact/', include('contact_form.urls')),
+    url(r'', include('webmaster_verification.urls')),
 )
 
 urlpatterns += patterns('django.views.generic.simple', 

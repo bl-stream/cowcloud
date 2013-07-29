@@ -149,6 +149,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'pure_pagination',
     'south',
+    'webmaster_verification',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -301,6 +302,13 @@ PYBB_SMILES = {
 
 PAYPAL_RECEIVER_EMAIL = "panjul76@hotmail.com"
 
+WEBMASTER_VERIFICATION = {
+#    'bing': '<bing verification code>',
+    'google': 'google722faf1b2e594e5e',
+#    'majestic': '<majestic verification code>',
+#    'yandex': '<yandex verification code>',
+#    'alexa': '<alexa verification code>',
+}
 #import dj_database_url
 #DATABASES['default'] =  dj_database_url.config()
 
