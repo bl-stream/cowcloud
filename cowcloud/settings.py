@@ -93,6 +93,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+	'downtime.middleware.DowntimeMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -151,6 +152,7 @@ INSTALLED_APPS = (
     'south',
     'webmaster_verification',
     #'static_sitemaps',
+    'downtime',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -312,6 +314,11 @@ WEBMASTER_VERIFICATION = {
 }
 
 #STATICSITEMAPS_ROOT_SITEMAP = 'cowcloud.sitemaps.sitemaps'
+
+DOWNTIME_EXEMPT_PATHS = (
+    '/admin',
+)
+
 
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
