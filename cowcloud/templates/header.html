@@ -1,64 +1,64 @@
 {% load i18n %}
 
 <div class="navbar main">
-    <div class="navbar-inner">
-        <div class="nav-collapse">
-            <ul class="nav">
-                <li><a href="/">Home</a></li>
-                <li class="divider-vertical"></li>
-                <li><a href="/files/upload/">Upload File</a></li>
-                <li class="divider-vertical"></li>
-                <li><a href="/files/list/">My Files</a></li>
-                <li class="divider-vertical"></li>
-                <li><a href="#plans">Plans</a></li>
-                <li class="divider-vertical"></li>
-                <li><a href="#faqs">FAQs</a></li>
-                <li class="divider-vertical"></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="get_evernote">
-                <a href="/" title="File Delivery & Storage Solutions">
-                    <span class="message">
-                        <span id="icon">CowCloud</span>
-                    </span>
-                </a>
-            </div>
-            {% if user.is_authenticated %}
-
-            <div class="member-welcome pull-right">
-                <ul class="nav pull-right">
-                    <li class="dropdown pull-right">
-                        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome back' %}, {{ user.get_full_name }} <b class="caret"></b></a> -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome back' %}, {{ user.username }} <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url django.contrib.auth.views.password_change %}">{% trans "Change password" %}</a></li>
-                            <li><a href="{% url django.contrib.auth.views.logout %}">{% trans 'Logout' %}</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            {% else %}
-            <form class="navbar-form pull-right" action="{% url django.contrib.auth.views.login %}" method="post">
-                {% csrf_token %}
-                <div style="display:none">
-                    <input name="csrfmiddlewaretoken" value="{{ csrf_token }}" type="hidden">
-                </div>
-                <input class="input-small" name="username" id="id_username" type="text" placeholder="{% trans 'Username' %}">
-                <input class="input-small" name="password" id="id_password" type="password" placeholder="{% trans 'Password' %}">
-                <div class="btn-group pull-right">
-                    <button class="btn" type="submit">{% trans 'Login' %}</button>
-                    <button class="btn dropdown-toggle" data-toggle="dropdown">
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <!-- dropdown menu links -->
-                        <li><a href="{% url django.contrib.auth.views.password_reset %}">{% trans "Forgot your password?" %}</a></li>
-                        <li><a href="/accounts/register/">Sign Up</a></li>
-                    </ul>
-                </div>
-            </form>
-            {% endif %}
-        </div><!--/.nav-collapse -->
-    </div><!--/.navbar-inner -->
+	<div class="navbar-inner">
+		<div class="nav-collapse">
+			<ul class="nav">
+				<li><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="/files/upload/"><i class="icon-upload icon-white"></i> Upload File</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="/files/list/"><i class="icon-folder-open icon-white"></i> My Files</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="#plans"><i class="icon-list icon-white"></i> Plans</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="#faqs"><i class="icon-question-sign icon-white"></i> FAQs</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="#contact"><i class="icon-user icon-white"></i> Contact</a></li>
+			</ul>
+		
+		<div class="get_evernote">
+			<a href="/plans/" title="CowCloud" id="downloadLink">
+				<span class="message">
+					<span id="en_icon" lang="en">Get CowCloud, it&#8217;s free</span>
+					<span class="follow" lang="">&#9658;</span>
+				</span>
+			</a>
+		</div>
+		
+		{% if user.is_authenticated %}
+		<div class="member-welcome pull-right">
+			<ul class="nav pull-right">
+				<li class="dropdown pull-right">
+					<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome back' %}, {{ user.get_full_name }} <b class="caret"></b></a> -->
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome back' %}, {{ user.username }} <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="{% url django.contrib.auth.views.password_change %}">{% trans "Change password" %}</a></li>
+						<li><a href="{% url django.contrib.auth.views.logout %}">{% trans 'Logout' %}</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		{% else %}
+		<form class="navbar-form pull-right" action="{% url django.contrib.auth.views.login %}" method="post">
+			{% csrf_token %}
+			<div style="display:none">
+				<input name="csrfmiddlewaretoken" value="{{ csrf_token }}" type="hidden">
+			</div>
+			<input class="input-small" name="username" id="id_username" type="text" placeholder="{% trans 'Username' %}">
+			<input class="input-small" name="password" id="id_password" type="password" placeholder="{% trans 'Password' %}">
+			<div class="btn-group pull-right">
+				<button class="btn" type="submit">{% trans 'Login' %}</button>
+				<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<!-- dropdown menu links -->
+					<li><a href="{% url django.contrib.auth.views.password_reset %}">{% trans "Forgot your password?" %}</a></li>
+					<li><a href="/accounts/register/">Sign Up</a></li>
+				</ul>
+			</div>
+		</form>
+		{% endif %}
+		</div><!--/.nav-collapse -->
+	</div><!--/.navbar-inner -->
 </div><!--/.navbar main -->

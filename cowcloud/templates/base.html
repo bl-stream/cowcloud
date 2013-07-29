@@ -10,8 +10,8 @@
 <link rel="shortcut icon" href="{{ MEDIA_URL }}img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/reset.css" type="text/css" />
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/bootstrap.css" type="text/css" />
-<link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css" type="text/css" />
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/header.css" type="text/css" />
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css" type="text/css" />
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/footer.css" type="text/css" />
 <style type="text/css">
     @font-face {
@@ -29,9 +29,10 @@
 
 <body>
 
-    {% block content %}
-    {{ flatpage.content|safe }}
-    {% endblock %}
+{% block content %}
+{{ flatpage.content|safe }}
+{% endblock %}
+<div class="clear"></div>
 
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui-1.js"></script>

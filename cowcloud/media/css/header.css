@@ -20,7 +20,7 @@
   box-shadow: 0px 8px 8px -4px rgba(0, 0, 0, 0.6) inset;
   height: 27.5px;
   /* border-bottom:2px solid #DC5526; */
-  /*border-bottom:4px solid #812F11;*/
+  border-bottom:4px solid #812F11;
 }
 
 .navbar .nav li .dropdown-menu a:hover
@@ -34,152 +34,50 @@
     box-shadow:0 1px 3px #dc5526,inset 0 -1px 0 #dc5526;
 }
 
-.navbar .navbar-inner {
+.navbar.main .navbar-inner {
   border-radius: 0 0 3px 3px;
   background: #2d2d2d;
   opacity: 0.75;
   padding: 0;
   height: 50px;
 }
-
-.navbar .divider-vertical {
+.navbar.main .divider-vertical {
   margin: 0;
   background: #404040;
   border-right: 0px solid #404040;
   height: 14px;
   margin-top: 13px;
 }
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
+.navbar.main .nav .active > a,
+.navbar.main .nav .active > a:hover {
   background: inherit;
   color: #b6b6b6;
   font-weight: bold;
 }
-.navbar .nav  > li > a {
+.navbar.main .nav  > li > a {
   color: #bbbbbb;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
-.navbar form {
+.navbar.main form {
   width: 316px;
   margin-top: -50px;
 }
-.navbar form input {
+.navbar.main form input {
   width: 100px;
 }
-.navbar form button {
+.navbar.main form button {
   background: #dc5526;
   border: 1px solid rgba(0, 0, 0, 0.25);
   color: white;
   font-weight: bold;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
-.navbar form .btn-group {
+.navbar.main form .btn-group {
   margin-left: 3px;
   margin-right: 5px;
 }
-.navbar form .dropdown-menu:after,
-.navbar form .dropdown-menu:before {
+.navbar.main form .dropdown-menu:after,
+.navbar.main form .dropdown-menu:before {
   display: none;
 }
-
-.get_evernote {
-    margin: 10px 150px;
-    text-align: center;
-    clear: both;
-    position: relative;
-    display: inline-block;
-    height: 20px;
-}
-
-.get_evernote a {
-    margin: 0 auto;
-    padding-left: 0;
-    color: #fff;
-    font-weight: bold;
-    text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
-    display: block;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
-    border-radius: 150px;
-    width: 300px;
-    height: 55px;
-    font-size: 28px;
-    border: 10px #812F11 solid;
-    position:relative;
-
-    -webkit-box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.6);
-    box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.6);
-
-    background: #DC5526; /* Old browsers */
-    background: -moz-linear-gradient(top,  #DC5526 0%, #CB5024 26%, #a43e18 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DC5526), color-stop(26%,#CB5024), color-stop(100%,#a43e18)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #DC5526 0%,#CB5024 26%,#a43e18 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #DC5526 0%,#CB5024 26%,#a43e18 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #DC5526 0%,#CB5024 26%,#a43e18 100%); /* IE10+ */
-    background: linear-gradient(top,  #DC5526 0%,#CB5024 26%,#a43e18 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DC5526', endColorstr='#a43e18',GradientType=0 ); /* IE6-9 */
-    }
-
-
-.get_evernote a:hover {
-    text-decoration: none;
-    background: #a43e18; /* Old browsers */
-    background: -moz-linear-gradient(top, #a43e18 0%, #CB5024 73%, #DC5526 99%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a43e18), color-stop(73%,#CB5024), color-stop(99%,#DC5526)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #a43e18 0%,#CB5024 73%,#DC5526 99%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #a43e18 0%,#CB5024 73%,#DC5526 99%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #a43e18 0%,#CB5024 73%,#DC5526 99%); /* IE10+ */
-    background: linear-gradient(top, #a43e18 0%,#CB5024 73%,#DC5526 99%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a43e18', endColorstr='#DC5526',GradientType=0 ); /* IE6-9 */
-}
-
-.get_evernote a span.message {
-    margin: 0 auto;
-    padding: 15px 20px 15px 65px;
-    width: 215px;
-    /*
-    padding: 0px 20px 15px 10px;
-    width: 310px;
-    */
-    display: block;
-    height: 22px;
-    background: url('../img/cowcloud-icon.png') no-repeat 16px 10px;
-    border-top: 1px solid rgba(82,82,82,0.2);
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
-    border-radius: 150px;
-    /* behavior:url('/media/css/border-radius.htc'); */
-    }
-
-body.rtl .get_evernote a span.message {
-    padding: 15px 65px 15px 20px;
-    background-position: 276px 10px;
-    }
-
-
-/*
-.get_evernote a span.message img {
-    display: inline !important;
-    position: relative;
-    top: 1em;
-    }
-*/
-
-.get_evernote a span.follow {
-    font-size: .8em;
-    position: relative;
-    top: -1px;
-    }
-
-body.rtl .get_evernote a span.follow {
-    font-family: sans-serif;
-    }
-
-
-.get_evernote a:active span.message {
-    background-color: #A43E18;
-    }
 

@@ -1,292 +1,39 @@
-.contact {
-	background:#373D43 url("../img/bg-footer.jpg") repeat 0 0;
-	background-color: #3A3F45;
-    color: #FFFFFF;
-}
-
 .contact section.container-fluid {
-	background:#373D43 url("../img/bg-footer.jpg") repeat 0 0;
-	background-color: #3A3F45;
-    color: #FFFFFF;
-
+	background:#585957 url("../img/bg-footer.jpg") repeat 0 0;
+    width: auto;
+    margin: 20px auto 0 auto;
+    box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.6) inset;
+    padding: 10px 0 40px 70px;
+    color: #d2d2d2;
+    height: 240px;
+    font-family: 'Ubuntu',sans-serif;
 }
 
-.contact-us form input,
-.contact-us form textarea {
-  width: 292px;
-}
-.contact-us form label,
-.contact-us form input {
-  font-size: 16px;
-  line-height: 24px;
-}
-.contact-us form img {
-  display: block;
-  margin-bottom: 3px;
-}
-.contact-us .sidebar dt,
-.contact-us .sidebar dd {
-  font-size: 18px;
-  line-height: 36px;
-}
-.contact-us .sidebar dd {
-  margin-bottom: 20px;
+.contact section.container-fluid .entry {
+	width: 330px;
+	margin: 0 20px;
+	display: inline-block;
+	vertical-align: text-top;
+	/*background: url(img/bottom_sep_bg.png) top right repeat-y;*/
+	padding: 10px 20px 10px 10px;
 }
 
-#contact{
-/*    background: url("../img/contact.png") repeat;*/
-    background-color: #3A3F45;
-    border-top: 5px solid #fff;
-    height:540px;
+.contact section.container-fluid .entry img {
+	vertical-align: text-bottom;
+	position: relative;
+	top: 5px;
+	left: 0px;
 }
 
-#contact h1{
-    font-family: neue,chinrg,chint;
-    font-weight: bold;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: #555;
-    padding: 20px;
-    text-align: center;
+.contact section.container-fluid .entry-title {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0px 0px 20px 2px;
+	display: inline-block;
 }
 
-#contact .ce {
-    width:800px;
-}
-#contact .left{
-    float: left;
-    width: 400px;
-    font-family: Arial;
-}
-
-#contact .left p{
-    color:#777;
-    font-family: 'Pt Sans', sans-serif;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding:5px 0;
-
-}
-
-#contact-form input{
-    width:320px;
-    padding:8px;
-    border:1px solid #ddd;
-    margin: 4px 0;
-    outline: none;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-
-}
-
-
-#contact-form input:active,#contact-form textarea:active{
-    outline: none;
-
-
-}
-
-#contact-form input:focus,#contact-form textarea:focus{
-    box-shadow: 0 0 8px #347ba7;
-
-
-
-}
-
-
-
-#contact-form textarea{
-    width:320px;
-    padding:8px;
-    border:1px solid #ddd;
-    border-radius: 2px;
-    font-family: Arial;
-    margin: 4px 0;
-    height:60px;
-    outline: none;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-
-
-}
-
-
-#contact-form button{
-    padding:10px 15px;
-/*    background: #347ba7;*/
-    background: #DC5526;
-    color: #fff;
-    border: 1px solid #9B604C;
-    text-decoration: none;
-    box-shadow:inset 0 1px 0px #9B604C;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    font-weight: bold;
-    width:337px;
-    cursor: pointer;
-
-
-}
-
-
-#contact .left button:hover {
-    opacity:.8;
-
-}
-
-#contact .left button:active {
-    box-shadow: inset 0 0 4px #2e86c2;
-}
-
-#contact .right{
-    float: left;
-    width: 400px;
-    padding:10px 0;
-
-}
-
-
-#contact .right h1{
-    color:#347ba7;
-    font-family: 'Pt Sans', sans-serif;
-    font-size: 16px;
-    text-align: left;
-    padding: 10px 0;
-
-}
-
-
-#contact .right span{
-    color:#666;
-    font-family: 'Pt Sans', sans-serif;
-    font-size: 14px;
-    text-align: left;
-
-}
-
-
-#contact .right p{
-    color:#888;
-    font-family: 'Pt Sans', sans-serif;
-    font-size: 14px;
-    text-align: left;
-    padding: 5px 0;
-
-}
-
-.sep {
-    height: 10px;
-    border-bottom: 1px dashed #ccc;
-}
-
-#social {
-    float: left;
-    padding:10px 0 10px 0;
-
-}
-
-#social .tw {
-    text-indent: -9999px;
-    width: 47px;
-    height:44px;
-    background: url(../img/socialicons.png);
-    display: block;
-    float: left;
-    margin-right: 10px;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-#social .tw:hover {
-    text-indent: -9999px;
-    width: 47px;
-    height:44px;
-    background-position:0 -45px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-}
-
-#social .fb {
-    text-indent: -9999px;
-    width: 47px;
-    height:44px;
-    background: url(../img/socialicons.png) -57px 0px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-        -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-
-#social .fb:hover {
-    text-indent: -9999px;
-    width: 47px;
-    height:44px;
-    background-position:-57px -45px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-}
-
-#social .gp {
-    text-indent: -9999px;
-    width: 47px;
-    height:44px;
-    background: url(../img/socialicons.png) -115px 0px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-        -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-#social .gp:hover {
-    text-indent: -9999px;
-    width: 47px;
-    height:44px;
-    background-position:-115px -45px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-}
-
-
-#social .in {
-    text-indent: -9999px;
-    width: 47px;
-    height:44px;
-    background: url(../img/socialicons.png) -172px 0px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-#social .in:hover {
-    text-indent: -9999px;
-    width: 47px;
-    height:44px;
-    background-position: -172px -45px;
-    display: block;
-    float: left;
-    margin-right: 10px;
+.contact section.container-fluid .entry .text {
+	text-align: justify;
 }
 
 
