@@ -52,7 +52,8 @@ urlpatterns += patterns('django.views.generic.simple',
 )
 
 urlpatterns += patterns('',
-    (r'^sitemap\.xml, 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+	(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+    #url(r'^sitemap.xml', include('static_sitemaps.urls')),
 )
 
 if settings.USE_SAML2:
