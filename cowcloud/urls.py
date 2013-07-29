@@ -25,8 +25,8 @@ urlpatterns = patterns('',
     (r'^accounts/$', 'django.views.generic.simple.direct_to_template', {'template': 'accounts.html'}, 'accounts'),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
-    url('imprint', 'cowcloud.views.imprint', name='homepage_imprint'),
-	url('archive', 'cowcloud.views.archive', name='homepage_archive'),
+    #url('imprint', 'cowcloud.views.imprint', name='homepage_imprint'),
+	#url('archive', 'cowcloud.views.archive', name='homepage_archive'),
 	
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/media/img/favicon.ico'}),
     (r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'home.html'}, 'index'),
@@ -52,8 +52,8 @@ urlpatterns += patterns('django.views.generic.simple',
 )
 
 urlpatterns += patterns('',
-	(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
-    #url(r'^sitemap.xml', include('static_sitemaps.urls')),
+	#(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+    url(r'^sitemap.xml', include('static_sitemaps.urls')),
 )
 
 if settings.USE_SAML2:
@@ -68,7 +68,7 @@ if settings.DEBUG:
         (r'^storage/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STORAGE_ROOT}),
 )
 
-sitemaps = {
-	'pages':Sitemap(['homepage_imprint', 'homepage_archive']),
-	'blog':FileSitemap, 'site':Sitemap(['cowcloud.org', 'cowcloud.org']),
-}
+#sitemaps = {
+#	'pages':Sitemap(['homepage_imprint', 'homepage_archive']),
+#	'blog':FileSitemap, 'site':Sitemap(['cowcloud.org', 'cowcloud.org']),
+#}
