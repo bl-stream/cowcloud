@@ -116,11 +116,14 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, 'templates')
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
+    "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
     'files.context_processors.auth_urls',
     'files.context_processors.storage',
@@ -137,6 +140,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     # Uncomment the next line to enable the admin:
+    #'django_admin_bootstrapped',
+    'suit',
+    #'bootstrap_admin',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
@@ -330,4 +336,9 @@ SITE_READ_ONLY = False
 
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+ALLOWED_HOSTS = ['*']
 
