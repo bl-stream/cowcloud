@@ -4,7 +4,6 @@ PIL==1.1.7
 South==0.7.6
 anafero==1.0
 argparse==1.2.1
-bootstrap-admin==0.1
 decorator==3.4.0
 dj-database-url==0.2.1
 -e git://github.com/riccardo-forina/django-admin-bootstrapped.git@b6b9c4d13de11657cb5b6b477ab01c1505a6e038#egg=django_admin_bootstrapped-master
