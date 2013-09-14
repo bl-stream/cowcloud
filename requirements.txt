@@ -21,7 +21,7 @@ django-guardian==1.1.0
 django-mailer==0.1.0
 django-openid-auth==0.4
 django-pure-pagination==0.2.1
-django-registration==0.7.1
+django-registration
 django-static-sitemaps==1.5.2
 django-suit==0.2.4
 django-userena==1.2.0
