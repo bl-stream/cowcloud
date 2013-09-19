@@ -400,3 +400,132 @@ body.rtl .get_evernote a span.follow {
     text-align: center;
     margin: 20px 30px;
 }
+
+#social {
+	float: left;
+	padding:10px 0 10px 0;
+
+}
+
+#social .tw {
+	text-indent: -9999px;
+	width: 47px;
+	height:44px;
+	background: url(../img/socialicons.png);
+	display: block;
+	float: left;
+	margin-right: 10px;
+	-webkit-transition: all .3s ease-in-out;
+  	-moz-transition: all .3s ease-in-out;
+  	-o-transition: all .3s ease-in-out;
+  	transition: all .3s ease-in-out;
+}
+
+#social .tw:hover {
+	text-indent: -9999px;
+	width: 47px;
+	height:44px;
+	background-position:0 -45px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#social .fb {
+	text-indent: -9999px;
+	width: 47px;
+	height:44px;
+	background: url(../img/socialicons.png) -57px 0px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+		-webkit-transition: all .3s ease-in-out;
+  	-moz-transition: all .3s ease-in-out;
+  	-o-transition: all .3s ease-in-out;
+  	transition: all .3s ease-in-out;
+}
+
+
+#social .fb:hover {
+	text-indent: -9999px;
+	width: 47px;
+	height:44px;
+	background-position:-57px -45px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#social .gp {
+	text-indent: -9999px;
+	width: 47px;
+	height:44px;
+	background: url(../img/socialicons.png) -115px 0px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+		-webkit-transition: all .3s ease-in-out;
+  	-moz-transition: all .3s ease-in-out;
+  	-o-transition: all .3s ease-in-out;
+  	transition: all .3s ease-in-out;
+}
+
+#social .gp:hover {
+	text-indent: -9999px;
+	width: 47px;
+	height:44px;
+	background-position:-115px -45px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+
+#social .in {
+	text-indent: -9999px;
+	width: 47px;
+	height:44px;
+	background: url(../img/socialicons.png) -172px 0px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+	-webkit-transition: all .3s ease-in-out;
+  	-moz-transition: all .3s ease-in-out;
+  	-o-transition: all .3s ease-in-out;
+  	transition: all .3s ease-in-out;
+}
+
+#social .in:hover {
+	text-indent: -9999px;
+	width: 47px;
+	height:44px;
+	background-position: -172px -45px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#social .od{
+    text-indent: -9999px;
+    width: 47px;
+    height:44px;
+    background: url(../img/socialicons.png) -229px 0px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#social .od:hover{
+    text-indent: -9999px;
+    width: 47px;
+    height:44px;
+    background-position: -229px -45px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
