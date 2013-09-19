@@ -529,3 +529,6 @@ body.rtl .get_evernote a span.follow {
     margin-right: 10px;
 }
 
+.preview img {
+    max-height: 50px;
+}

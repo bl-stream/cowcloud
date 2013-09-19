@@ -10,6 +10,7 @@
   position: fixed;
   width:100%;
   clear: both;
+  top: 0;
 }
 
 .navbar .nav li a:hover
