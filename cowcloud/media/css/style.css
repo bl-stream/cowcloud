@@ -263,7 +263,7 @@ a, a:hover{
 
 
 .get_evernote {
-    margin: 10px 170px 10px -10px;
+    margin: 10px 170px 10px 70px;
 	text-align: center;
 	clear: both;
 	position: relative;
@@ -531,4 +531,8 @@ body.rtl .get_evernote a span.follow {
 
 .preview img {
     max-height: 50px;
+}
+
+.navbar .nav {
+	padding: 0 10px;
 }
