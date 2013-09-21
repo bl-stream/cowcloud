@@ -93,7 +93,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-	'downtime.middleware.DowntimeMiddleware',
+	#'downtime.middleware.DowntimeMiddleware',
 	'readonly.middleware.DatabaseReadOnlyMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -156,14 +156,14 @@ INSTALLED_APPS = (
     'anafero',
     'contact_form',
     'pybb',
-    'pytils',
-    'sorl.thumbnail',
-    'pure_pagination',
+    #'pytils',
+    #'sorl.thumbnail',
+    #'pure_pagination',
     'south',
-    'webmaster_verification',
+    #'webmaster_verification',
     #'static_sitemaps',
-    'downtime',
-    'readonly',
+    #'downtime',
+    #'readonly',
     'debug_toolbar',
  )
 
@@ -327,9 +327,9 @@ WEBMASTER_VERIFICATION = {
 
 #STATICSITEMAPS_ROOT_SITEMAP = 'cowcloud.sitemaps.sitemaps'
 
-DOWNTIME_EXEMPT_PATHS = (
-    '/admin',
-)
+#DOWNTIME_EXEMPT_PATHS = (
+#    '/admin',
+#)
 
 # Set to False to allow writes
 SITE_READ_ONLY = False
@@ -337,8 +337,8 @@ SITE_READ_ONLY = False
 # Enable
 #DB_READ_ONLY_MIDDLEWARE_MESSAGE = True
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

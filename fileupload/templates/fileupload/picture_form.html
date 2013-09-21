@@ -1,11 +1,12 @@
 {% include "base.html" %}
 {% include "header.html" %}
 
+{% load i18n %}
 {% load upload_tags %}
 
 {% block content %}
 <div class="container">
-
+{% if user.is_authenticated %}
     <form id="fileupload" method="post" action="." enctype="multipart/form-data">{% csrf_token %}
         <div class="row fileupload-buttonbar">
             <div class="span7">
@@ -42,7 +43,6 @@
         <table class="files"></table>
         <div class="fileupload-progressbar"></div>
     </div>
-</div>
 <!-- modal-gallery is the modal dialog used for the image gallery -->
 <div id="modal-gallery" class="modal modal-gallery hide fade" data-filter=":odd">
     <div class="modal-header">
@@ -69,7 +69,17 @@
         </a>
     </div>
 </div>
+{% else %}
+{% trans 'Welcome Guest,' %}
+<br />
+{% trans 'Please ' %} <a href="/accounts/login/"><span>Sign In</span></a> {% trans 'to upload' %}
+<br />
+{% trans 'Or ' %} <a href="/accounts/register/">Register</a> {% trans 'if not yet have account' %}
+{% endif %}
+
 {% upload_js %}
+
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="{{ STATIC_URL }}js/jquery.ui.widget.js"></script>

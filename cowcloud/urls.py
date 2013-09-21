@@ -42,7 +42,7 @@ urlpatterns = patterns('',
 
     url(r"^r/", include("anafero.urls")),
     (r'^contact/', include('contact_form.urls')),
-    url(r'', include('webmaster_verification.urls')),
+    #url(r'', include('webmaster_verification.urls')),
 )
 
 if settings.USE_SAML2:
