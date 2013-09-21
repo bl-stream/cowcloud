@@ -1,4 +1,6 @@
 import os
+from django.conf import global_settings
+
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 USE_SAML2 = False
 
@@ -119,7 +121,7 @@ TEMPLATE_DIRS = (
 
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
-TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+TEMPLATE_CONTEXT_PROCESSORS = TCP + global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
@@ -130,6 +132,7 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'files.context_processors.storage',
     'pybb.context_processors.processor',
     'readonly.context_processors.readonly',
+    'plans.context_processors.account_status',
 )
 
 INSTALLED_APPS = (
@@ -153,6 +156,7 @@ INSTALLED_APPS = (
     'fileupload',
     'registration',
     #'moneybookers',
+    'plans',
     'anafero',
     'contact_form',
     'pybb',
@@ -324,6 +328,8 @@ WEBMASTER_VERIFICATION = {
 #    'yandex': '<yandex verification code>',
 #    'alexa': '<alexa verification code>',
 }
+
+CURRENCY = 'EUR'
 
 #STATICSITEMAPS_ROOT_SITEMAP = 'cowcloud.sitemaps.sitemaps'
 
