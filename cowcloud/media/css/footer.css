@@ -1,3 +1,9 @@
+.contact {
+	z-index: 10;
+	-moz-box-shadow: 0 10px 0 0 #333, 0 10px 0 0 #333;
+	-webkit-box-shadow: 0 10px 0 0 #333, 0 10px 0 0 #333;
+	box-shadow: 0 10px 0 0 #333, 0 10px 0 0 #333;
+}
 .contact section.container-fluid {
 	background:#585957 url("../img/bg-footer.jpg") repeat 0 0;
     width: auto;
@@ -40,7 +46,7 @@
 	margin-left: 70px;
 }
 .footer {
-    box-shadow:0 0 0 #dc5526,inset 0 1px 0 0 #dc5526;
+    box-shadow:0 0 0 #dc5526,inset 0 0.5px 0 0 #dc5526;
     padding-top: 20px;
 /*    bottom: 0;
     position: absolute;*/
