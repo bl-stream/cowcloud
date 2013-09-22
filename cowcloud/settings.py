@@ -168,7 +168,7 @@ INSTALLED_APPS = (
     #'static_sitemaps',
     #'downtime',
     #'readonly',
-    'debug_toolbar',
+    #'debug_toolbar',
  )
 
 # A sample logging configuration. The only tangible logging
