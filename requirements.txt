@@ -17,7 +17,7 @@ billiard==2.7.3.32
 celery==3.0.9
 decorator==3.4.0
 dj-database-url==0.2.1
--e git://github.com/riccardo-forina/django-admin-bootstrapped.git@b6b9c4d13de11657cb5b6b477ab01c1505a6e038#egg=django_admin_bootstrapped-dev
+#-e git://github.com/riccardo-forina/django-admin-bootstrapped.git@b6b9c4d13de11657cb5b6b477ab01c1505a6e038#egg=django_admin_bootstrapped-dev
 django-annoying==0.7.7
 django-appconf==0.5
 django-bootstrap-form==2.0.3
