@@ -1,4 +1,3 @@
-virenv
 *.psd
 *.pdf
 *.pyc
@@ -11,4 +10,3 @@ local_settings.py
 /test
 /spec
 /__MACOSX
-
