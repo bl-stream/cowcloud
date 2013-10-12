@@ -6,7 +6,7 @@ USE_SAML2 = False
 
 # Django settings for cowcloud project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 INTERNAL_IPS = ('127.0.0.1',)
 
@@ -168,7 +168,7 @@ INSTALLED_APPS = (
     #'static_sitemaps',
     #'downtime',
     #'readonly',
-    #'debug_toolbar',
+    'debug_toolbar',
  )
 
 # A sample logging configuration. The only tangible logging
@@ -343,8 +343,8 @@ SITE_READ_ONLY = False
 # Enable
 #DB_READ_ONLY_MIDDLEWARE_MESSAGE = True
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
