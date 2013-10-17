@@ -2,10 +2,15 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.views.generic.simple import direct_to_template
+from .sitemaps import StaticSitemap
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
+
+sitemaps = dict(
+        static = StaticSitemap,
+)
 
 urlpatterns = patterns('',
     # Examples:
@@ -43,7 +48,7 @@ urlpatterns = patterns('',
     url(r"^r/", include("anafero.urls")),
     (r'^contact/', include('contact_form.urls')),
     #url(r'', include('webmaster_verification.urls')),
-	(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps})
+	(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 	(r'^robots\.txt$', direct_to_template, {'template': 'robots.txt', 'mimetype': 'text/plain'}),
 )
 

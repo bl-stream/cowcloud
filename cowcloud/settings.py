@@ -165,7 +165,6 @@ INSTALLED_APPS = (
     #'pure_pagination',
     'south',
     #'webmaster_verification',
-    #'static_sitemaps',
     #'downtime',
     #'readonly',
     'debug_toolbar',
@@ -331,8 +330,6 @@ WEBMASTER_VERIFICATION = {
 
 CURRENCY = 'USD'
 
-#STATICSITEMAPS_ROOT_SITEMAP = 'cowcloud.sitemaps.sitemaps'
-
 #DOWNTIME_EXEMPT_PATHS = (
 #    '/admin',
 #)
@@ -343,6 +340,7 @@ SITE_READ_ONLY = False
 # Enable
 #DB_READ_ONLY_MIDDLEWARE_MESSAGE = True
 
+# Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
 
@@ -350,4 +348,3 @@ DATABASES['default'] =  dj_database_url.config()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['*']
-
