@@ -8,7 +8,9 @@ class StaticSitemap(Sitemap):
     def items(self):
         return [
                 "/",
-                "/upload",
+                "/upload/new",
+                "/plans",
+                "/faq",
                 "/contact",
             ]
  
