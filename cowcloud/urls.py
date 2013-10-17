@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
 from django.conf.urls import patterns, include, url
-
+from django.http import HttpResponse
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -43,6 +43,7 @@ urlpatterns = patterns('',
     url(r"^r/", include("anafero.urls")),
     (r'^contact/', include('contact_form.urls')),
     #url(r'', include('webmaster_verification.urls')),
+    (r'^robots\.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /", mimetype="text/plain"))
 )
 
 if settings.USE_SAML2:
