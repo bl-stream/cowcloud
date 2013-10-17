@@ -329,7 +329,7 @@ WEBMASTER_VERIFICATION = {
 #    'alexa': '<alexa verification code>',
 }
 
-CURRENCY = 'EUR'
+CURRENCY = 'USD'
 
 #STATICSITEMAPS_ROOT_SITEMAP = 'cowcloud.sitemaps.sitemaps'
 
