@@ -28,9 +28,8 @@ urlpatterns = patterns('',
     (r'^pages/', include('django.contrib.flatpages.urls')),
     (r'^$', include('files.urls')),
     (r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^register/$', RegistrationView.as_view(form_class=RegistrationFormUniqueEmail), name='registration_register'),
     (r'^accounts/$', 'django.views.generic.simple.direct_to_template', {'template': 'accounts.html'}, 'accounts'),
-    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
 
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/media/img/favicon.ico'}),
     (r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'home.html'}, 'index'),
@@ -62,4 +61,6 @@ if settings.USE_SAML2:
 if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^storage/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STORAGE_ROOT}),
+	    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+	    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
 )

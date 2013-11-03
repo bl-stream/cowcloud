@@ -330,6 +330,15 @@ WEBMASTER_VERIFICATION = {
 
 CURRENCY = 'USD'
 
+ISSUER_DATA = {
+    "issuer_name": "Joe Doe Company",
+    "issuer_street": "Django street, 34",
+    "issuer_zipcode": "123-3444",
+    "issuer_city": "Djangoko",
+    "issuer_country": "Djangoland",
+    "issuer_tax_number": "1222233334444555",
+}
+
 #DOWNTIME_EXEMPT_PATHS = (
 #    '/admin',
 #)
@@ -341,8 +350,8 @@ SITE_READ_ONLY = False
 #DB_READ_ONLY_MIDDLEWARE_MESSAGE = True
 
 # Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

@@ -1,4 +1,5 @@
-virenv
+*.log
+*.pot
 *.psd
 *.pdf
 *.pyc
@@ -7,8 +8,6 @@ virenv
 .DS_Store
 .coverage
 local_settings.py
-/media
 /test
 /spec
 /__MACOSX
-
